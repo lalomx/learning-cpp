@@ -41,8 +41,65 @@ void Arrays()
     players[0].PrintAge();
 }
 
+void String()
+{
+    "Charno";
+}
+
+void Const() {
+    const int MAX_AGE = 90;
+
+    const int* a = new int;
+    // *a = 2;
+    // cannot reassign the pointer data
+
+    // can reassign pointer itself
+    a = (int*)&MAX_AGE;
+
+    int* const b = new int;
+
+    // can reassign pointer data
+    *b = 2;
+
+    // cannot reassign pointer itself
+    // b = (int*)&MAX_AGE;
+
+    // cannot reassign anything
+    const int* const c = new int;
+
+    std::cout << *a << std::endl;
+    std::cout << *b << std::endl;
+}
+
+
+void Mutable() {
+    Player lalo("Lalo");
+
+    const std::string name =lalo.GetName();
+
+    std::cout << name << std::endl;
+
+    int x = 10;
+    auto f = [=]() mutable
+    {
+        x++;
+        std::cout << x << std::endl;
+    };
+
+    f();
+}
+
+void Constructors()
+{
+    Player lalo("Lalo");
+    std::cout << lalo.GetName() << std::endl;
+
+    Player nose;
+    std::cout << nose.GetName() << std::endl;
+}
+
 int main()
 {
-    Arrays();
+    Constructors();
     std::cin.get();
 };

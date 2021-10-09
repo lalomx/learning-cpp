@@ -11,13 +11,16 @@ class Player : public Entity
 	// By default everything is private
 private:
 	int m_age = 20;
+	mutable int m_callCount = 0;
 public:
 	Player();
-	Player(const char* name);
-	const char* name = nullptr;
-	void PrintName();
+	Player(const std::string& name);
+	std::string m_name;
+	void PrintName() const;
 	void SetAge(int age);
-	void PrintAge();
+	void PrintAge() const;
+	int GetAge() const;
+	const std::string& GetName() const;
 };
 
 // polymorphism
