@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+using String = std::string;
 
 class Printable 
 {
@@ -25,7 +26,7 @@ protected:
 	}
 
 public:
-	std::string GetClassName() override 
+	String GetClassName() override
 	{
 		return "Entity";
 	}

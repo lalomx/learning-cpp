@@ -41,11 +41,6 @@ void Arrays()
     players[0].PrintAge();
 }
 
-void String()
-{
-    "Charno";
-}
-
 void Const() {
     const int MAX_AGE = 90;
 
@@ -98,8 +93,23 @@ void Constructors()
     std::cout << nose.GetName() << std::endl;
 }
 
+void Classes()
+{
+    Player* p;
+    Player l; // stack
+    {
+        p = new Player("Lalo"); // heap
+    }
+
+    std::cout << p->GetName() << std::endl;
+
+    delete p; // delete from the heap
+
+    // stack is freed after the function completes
+}
+
 int main()
 {
-    Constructors();
+    Classes();
     std::cin.get();
 };

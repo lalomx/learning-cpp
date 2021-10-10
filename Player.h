@@ -14,8 +14,8 @@ private:
 	mutable int m_callCount = 0;
 public:
 	Player();
-	Player(const std::string& name);
-	std::string m_name;
+	Player(const String& name);
+	String m_name;
 	void PrintName() const;
 	void SetAge(int age);
 	void PrintAge() const;

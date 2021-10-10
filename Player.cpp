@@ -5,7 +5,7 @@ Player::Player() : m_name("No name")
 {
 }
 
-Player::Player(const std::string& name) : m_name(name)
+Player::Player(const String& name) : m_name(name)
 {
 }
 
@@ -14,7 +14,7 @@ void Player::PrintName() const
 	std::cout << m_name << std::endl;
 }
 
-const std::string& Player::GetName() const {
+const String& Player::GetName() const {
 	m_callCount++;
 	return m_name;
 }
